@@ -38,7 +38,7 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* Skills list styles */
+
 .skills ul {
     list-style-type: none;
     padding: 0;
@@ -51,7 +51,7 @@ h2 {
     border-radius: 4px;
 }
 
-/* Contact link styles */
+
 .contact a {
     color: #35424a;
     text-decoration: none;
@@ -61,7 +61,7 @@ h2 {
     text-decoration: underline;
 }
 
-/* Footer styles */
+
 footer {
     text-align: center;
     padding: 10px 0;
