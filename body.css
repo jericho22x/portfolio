@@ -3,11 +3,11 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #bbb7b7;
+    background-color: #f4f4f4;
 }
 
 header {
-    background: #35424a;
+    background: #0094f0;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -32,7 +32,7 @@ main {
 }
 
 h2 {
-    color: #35424a;
+    color: #052336;
 }
 
 ul {
@@ -50,7 +50,7 @@ ul li {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #35424a;
+    background: #178cd4;
     color: #ffffff;
     position: relative;
     bottom: 0;
