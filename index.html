@@ -6,12 +6,12 @@
     <title>Jericho Noel A. Tibayan</title>
     <link rel="stylesheet" href="body.css">
     <link rel="stylesheet" href="jericho.css">
+    <link rel="stylesheet" href="jec.css">
     <style>
-        /
         .button {
             display: inline-block;
             padding: 10px 20px;
-            margin: 10px 0;
+            margin: 10px 5px; /* Adjusted margin for better spacing */
             background-color: #007BFF; 
             color: white;
             text-align: center;
@@ -21,32 +21,70 @@
         }
 
         .button:hover {
-            background-color: #0056b3; }
+            background-color: #0056b3; 
+        }
+
+        header {
+            text-align: center; /* Center align header content */
+            margin-bottom: 20px; /* Add some space below the header */
+        }
     </style>
 </head>
 <body>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
     <header>
         <h1>MY PERSONAL PORTFOLIO</h1>
+        <nav>
+            <a href="#about" class="button">About Me</a>
+            <a href="#skills" class="button">Skills</a>
+            <a href="#experience" class="button">Experience</a>
+            <a href="#education" class="button">Education</a>
+            <a href="#contact" class="button">Contact Me</a>
+        </nav>
     </header>
     <main>
         <section class="bio">
             <h2>Hi, I'm Jericho Noel A. Tibayan</h2>
             <p>I'm a student in St. Dominic College of Asia based in Bacoor City, Cavite.</p>
         </section>
-        <section class="skills">
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <p>I am passionate about technology and learning new skills. I enjoy working on projects that challenge me and allow me to grow.</p>
+        </section>
+        <section class="skills" id="skills">
             <h2>Skills</h2>
             <ul>
-                <li>I can live</li>
-                <li>I can fly.</li>
-                <li>I can reach the heavens above</li>
-                <li>I can right what is wrong</li>
-                <li> and touch the </li>
+                <li>Web Development</li>
+                <li>Graphic Design</li>
+                <li>Problem Solving</li>
+                <li>Team Collaboration</li>
+                <li>Communication</li>
             </ul>
         </section>
-        <section class="contact">
+        <section class="experience" id="experience">
+            <h2>Experience</h2>
+            <p>I have worked on various projects during my studies, including:</p>
+            <ul>
+                <li>Assisted in web development projects.</li>
+                <li>Freelance Graphic Designer - Created logos and marketing materials for local businesses.</li>
+            </ul>
+        </section>
+        <section class="education" id="education">
+            <h2>Education</h2>
+            <p>I am currently pursuing a degree in Computer Science at St. Dominic College of Asia.</p>
+            <ul>
+                <li>Bachelor of Science in BSIT (Expected Graduation: 2027)</li>
+                <li>Relevant Coursework: Web Development, Data Structures, Algorithms</li>
+            </ul>
+        </section>
+        <section class="contact" id="contact">
             <h2>Contact Me</h2>
-            <p>You can reach me at: <a href="mailto:jerichotibayan22@gmail.com">jerichotibayan22@gmail.com</a></p>
-            <p>Contact number: 09919245108</p>
+            <p>You can reach me at: <a href="mailto:jirico@gmail.com">jirico@gmail.com</a></p>
+            <p>Contact number: 4654641654</p>
             <a href="mailto:jerichotibayan22@gmail.com" class="button">Send Email</a>
             <a href="path/to/your/resume.pdf" class="button">Download Resume</a>
         </section>

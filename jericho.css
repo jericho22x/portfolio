@@ -9,11 +9,11 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
-    color: #333;
+    color: #000000;
 }
 
 header {
-    background: #35424a;
+    background: #009dff;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
