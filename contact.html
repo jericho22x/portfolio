@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Me - Jericho Noel A. Tibayan</title>
-    <link rel="stylesheet" href="body.css">
-    <link rel="stylesheet" href="jericho.css">
-    <link rel="stylesheet" href="jec.css">
+    <link rel="stylesheet" href="body.css" />
+    <link rel="stylesheet" href="jericho.css" />
+    <link rel="stylesheet" href="jec.css" />
     <style>
         .button {
             display: inline-block;
             padding: 10px 20px;
-            margin: 10px 5px; /* Adjusted margin for better spacing */
+            margin: 10px 5px;
             background-color: #007BFF;
             color: white;
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
-            font-size: 16px;
+            transition: background-color 0.3s;
         }
 
         .button:hover {
@@ -30,16 +29,36 @@
             margin-bottom: 20px;
         }
 
-        .profile-img {
-            width: 150px; /* Adjust width */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 50%; /* Circular image */
-            border: 2px solid #007BFF; /* Optional: add border around the image */
-            margin-top: 20px; /* Add space above the image */
+        .contact-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .bio {
-            text-align: center;
+        h2 {
+            color: #35424a;
+            border-bottom: 2px solid #35424a;
+            padding-bottom: 5px;
+        }
+
+        .contact-info {
+            line-height: 1.6;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -49,17 +68,20 @@
         <nav>
             <a href="index.html" class="button">Home</a>
             <a href="about.html" class="button">About Me</a>
-            <a href="skills.html" class="button">Skills</a>
             <a href="experience.html" class="button">Experience</a>
+            <a href="skills.html" class="button">Skills</a>
             <a href="education.html" class="button">Education</a>
         </nav>
     </header>
-    <section class="bio">
-        <h2>Contact Me</h2>
-        <p>You can reach me at: <a href="mailto:jirico@gmail.com">jirico@gmail.com</a></p>
-        <p>Contact number: 4654641654</p>
-        <a href="mailto:jerichotibayan22@gmail.com" class="button">Send Email</a>
-        <a href="path/to/your/resume.pdf" class="button">Download Resume</a>
+
+    <section class="contact-container">
+        <h2>Let's Get in Touch</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:jerichotibayan11@gmail.com">jerichotibayan11@gmail.com</a></p>
+            <p><strong>Phone:</strong> 09912313264</p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/yourprofile" target="_blank">facebook.com/yourprofile</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+        </div>
     </section>
 </body>
 </html>
