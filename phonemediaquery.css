@@ -1,0 +1,82 @@
+/* =========================
+   PHONE RESPONSIVE DESIGN
+   ========================= */
+@media screen and (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* Navigation buttons */
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .button {
+    width: 95%;
+    max-width: 300px;
+    margin: 0;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  /* Content sections */
+  .bio,
+  .about {
+    width: 100%;
+    padding: 15px;
+    margin: 15px auto;
+  }
+}
+
+/* =========================
+   SMALL PHONE DESIGN
+   ========================= */
+@media screen and (max-width: 480px) {
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .bio,
+  .about {
+    padding: 12px;
+  }
+}

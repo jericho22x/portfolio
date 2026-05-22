@@ -1,74 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me - Jericho Noel A. Tibayan</title>
-  <link rel="stylesheet" href="body.css" />
-  <link rel="stylesheet" href="jericho.css" />
-  <link rel="stylesheet" href="jec.css" />
-  <style>
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px 5px;
-      background-color: #007bff;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Me - Jericho Noel A. Tibayan</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f6ff;
+    /* Add padding so content isn't hidden behind fixed navbar */
+    padding-top: 60px;
+  }
+
+  /* NAVBAR - LOCKED AT TOP */
+  .nav-container {
+    background: #01253b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    /* LOCK THE NAVBAR */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  .nav-links li a:hover {
+    background: #00bcd4;
+    color: black;
+  }
+
+  /* MOBILE RESPONSIVENESS */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
     }
 
-    .button:hover {
-      background-color: #05192e;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .bio, .about {
-      background: #ffffff;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 800px;
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background: #01253b;
+      width: 200px;
+      padding: 10px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    h2 {
-      color: #01253b;
-      margin-bottom: 10px;
+    .nav-links.active {
+      display: flex;
     }
+  }
 
-    p {
-      font-size: 16px;
-      color: #333333;
-    }
-  </style>
+  /* HEADER */
+  header {
+    text-align: center;
+    padding: 25px;
+  }
+
+  header h1 {
+    color: #01253b;
+    margin: 0;
+  }
+
+  /* CARDS */
+  .card-container {
+    background: white;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    color: #01253b;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 10px;
+  }
+
+  p {
+    color: #333;
+    line-height: 1.6;
+  }
+</style>
 </head>
-<body>
-  <header>
-    <h1>About Me</h1>
-    <nav>
-            <a href="index.html" class="button">Home</a>
-            <a href="about.html" class="button">About Me</a>
-            <a href="skills.html" class="button">Skills</a>
-            <a href="experience.html" class="button">Experience</a>
-            <a href="education.html" class="button">Education</a>
-            <a href="techstack.html" class="button">Tech Stack</a>
-            <a href="contact.html" class="button">Contact Me</a>
-    </nav>
-  </header>
 
-  <section class="bio">
+<body>
+
+<!-- NAVBAR (LOCKED AT TOP) -->
+<div class="nav-container">
+  <a href="index.html" class="logo">My Portfolio</a>
+
+  <button class="menu-toggle" id="menu-toggle">☰</button>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="techstack.html">Tech Stack</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<!-- HEADER -->
+<header>
+  <h1>About Me</h1>
+</header>
+
+<!-- CONTENT -->
+<main>
+  <!-- BIO -->
+  <section class="card-container">
     <h2>Hi, I'm Jericho Noel A. Tibayan</h2>
-    <p>I'm a student at St. Dominic College of Asia, based in Bacoor City, Cavite.</p>
-  <section class="about">
-    <h2>More About Me</h2>
-    <p>I am passionate about technology and continuously learning new skills. I enjoy working on projects that challenge me and allow me to grow both technically and creatively.</p>
+    <p>
+      I'm a student at St. Dominic College of Asia, based in Bacoor City, Cavite.
+    </p>
   </section>
+
+  <!-- ABOUT -->
+  <section class="card-container">
+    <h2>More About Me</h2>
+    <p>
+      I am passionate about technology and continuously learning new skills.
+      I enjoy working on projects that challenge me and allow me to grow both
+      technically and creatively.
+    </p>
+  </section>
+</main>
+
+<!-- SCRIPT -->
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
 </body>
 </html>

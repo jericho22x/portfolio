@@ -1,156 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jericho Noel A. Tibayan</title>
-    <link rel="stylesheet" href="body.css">
-    <link rel="stylesheet" href="jericho.css">
-    <link rel="stylesheet" href="shesh.css">
-    <link rel="stylesheet" href="jec.css">
-    <style>
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 5px; /* Adjusted margin for better spacing */
-            background-color: #007BFF;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            font-size: 16px;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tech Stack - Jericho Noel A. Tibayan</title>
 
-        .button:hover {
-            background-color: #0056b3;
-        }
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f6ff;
+    padding-top: 60px;
+  }
 
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .profile-img {
-            width: 500px; /* Adjust width */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 50%; /* Circular image */
-            border: 2px solid #007BFF; /* Optional: add border around the image */
-            margin-top: 20px; /* Add space above the image */
-        }
-
-        .bio {
-            text-align: center ;
-        }
-.button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 5px;
-            background-color: #007BFF;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .skills {
-            background: #ffffff;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #35424a;
-            border-bottom: 2px solid #35424a;
-            padding-bottom: 5px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            background: #e2e2e2;
-            margin: 8px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .tech-stack {
+  /* NAVBAR */
+  .nav-container {
+    background: #01253b;
+    padding: 10px 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  .nav-links li a:hover {
+    background: #00bcd4;
+    color: black;
+  }
+
+  /* MOBILE NAVIGATION */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background: #01253b;
+      width: 200px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+  }
+
+  /* HEADER */
+  header {
+    text-align: center;
+    padding: 25px;
+  }
+
+  header h1 {
+    color: #01253b;
+    margin: 0;
+  }
+
+  /* CARD */
+  .card-container {
+    background: white;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    color: #01253b;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 10px;
+    margin-top: 0;
+  }
+
+  p {
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* TECH GRID */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 20px;
     margin-top: 20px;
-}
+  }
 
-.tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100px;
-}
+  .tech-item {
+    background: #f5f7fb;
+    padding: 20px 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+  }
 
-.tech-item img {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 8px;
-}
-    </style>
+  .tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .tech-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  .tech-name {
+    color: #01253b;
+    font-weight: bold;
+    font-size: 15px;
+  }
+</style>
 </head>
-<body>
-    <header>
 
-        <body>
-            <div class="hover-container">
-                <h1 class="explosive-text">Tech Stack</h1>
-            </div>
-        </body>
-        <nav>
-            <a href="index.html" class="button">Home</a>
-            <a href="about.html" class="button">About Me</a>
-            <a href="skills.html" class="button">Skills</a>
-            <a href="experience.html" class="button">Experience</a>
-            <a href="education.html" class="button">Education</a>
-            <a href="techstack.html" class="button">Tech Stack</a>
-            <a href="contact.html" class="button">Contact Me</a>
-        </nav>
-    </header>
-    <section>
-    <div class="section">
-    <h2>Tech Stack</h2>
-    <div class="tech-stack">
-        <div class="tech-item">
-            <img src="https://cdn.simpleicons.org/html5/FF5733" alt="HTML5">
-            <span>HTML</span>
-        </div>
-        <div class="tech-item">
-            <img src="https://cdn.simpleicons.org/css3/2965f1" alt="CSS3">
-            <span>CSS</span>
-        </div>
-        <div class="tech-item">
-            <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript">
-            <span>JavaScript</span>
-        </div>
-        <div class="tech-item">
-            <img src="https://cdn.simpleicons.org/git/F05032" alt="Git & GitHub">
-            <span>Git & GitHub</span>
-        </div>
-    </div>
+<body>
+
+<!-- NAVBAR -->
+<div class="nav-container">
+  <a href="index.html" class="logo">My Portfolio</a>
+
+  <button class="menu-toggle" id="menu-toggle">☰</button>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="techstack.html">Tech Stack</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </div>
-</section>
+
+<!-- HEADER -->
+<header>
+  <h1>Tech Stack</h1>
+</header>
+
+<!-- TECH STACK -->
+<main>
+  <section class="card-container">
+
+    <h2>Technologies I Use</h2>
+
+    <p>
+      Here are the tools and technologies I'm familiar with:
+    </p>
+
+    <div class="tech-grid">
+
+      <!-- HTML -->
+      <div class="tech-item">
+        <img src="images/html.png" alt="HTML5">
+        <div class="tech-name">HTML</div>
+      </div>
+
+      <!-- CSS -->
+      <div class="tech-item">
+        <img src="images/css.png" alt="CSS3">
+        <div class="tech-name">CSS</div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="tech-item">
+        <img src="images/JavaScript.png" alt="JavaScript">
+        <div class="tech-name">JavaScript</div>
+      </div>
+
+      <!-- GitHub -->
+      <div class="tech-item">
+        <img src="images/git.png" alt="GitHub">
+        <div class="tech-name">GitHub</div>
+      </div>
+
+      <!-- C Programming -->
+      <div class="tech-item">
+        <img src="images/Cprog.png" alt="C Programming">
+        <div class="tech-name">C</div>
+      </div>
+
+      <!-- Java -->
+      <div class="tech-item">
+        <img src="images/java.png" alt="Java">
+        <div class="tech-name">Java</div>
+      </div>
+
+      <!-- VS Code -->
+      <div class="tech-item">
+        <img src="images/vscode.png" alt="Visual Studio Code">
+        <div class="tech-name">VS Code</div>
+      </div>
+
+      <!-- Firebase -->
+      <div class="tech-item">
+        <img src="images/firebase.png" alt="Firebase">
+        <div class="tech-name">Firebase</div>
+      </div>
+
+      <!-- Android Studio -->
+      <div class="tech-item">
+        <img src="images/ADS.png" alt="Android Studio">
+        <div class="tech-name">Android Studio</div>
+      </div>
+
+      <!-- MongoDB -->
+      <div class="tech-item">
+        <img src="images/mdb.png" alt="MongoDB">
+        <div class="tech-name">MongoDB</div>
+      </div>
+
+      <!-- Node.js -->
+      <div class="tech-item">
+        <img src="images/nodejs.png" alt="Node.js">
+        <div class="tech-name">Node.js</div>
+      </div>
+
+      <!-- SQL -->
+      <div class="tech-item">
+        <img src="images/sqp.png" alt="SQL">
+        <div class="tech-name">SQL</div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- JAVASCRIPT -->
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
 </body>
 </html>
