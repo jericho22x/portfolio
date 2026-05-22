@@ -5,11 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Home - Jericho Noel A. Tibayan</title>
 
+<!-- EXTERNAL CSS (jec.css) -->
+<link rel="stylesheet" href="jec.css">
+
 <style>
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f6ff;
     padding-top: 60px;
   }
 
@@ -68,6 +70,7 @@
   /* MOBILE RESPONSIVENESS */
   @media (max-width: 768px) {
     .menu-toggle { display: block; }
+
     .nav-links {
       display: none;
       flex-direction: column;
@@ -79,7 +82,10 @@
       padding: 10px;
       border-radius: 10px;
     }
-    .nav-links.active { display: flex; }
+
+    .nav-links.active {
+      display: flex;
+    }
   }
 
   /* HEADER */
@@ -115,15 +121,15 @@
     line-height: 1.6;
   }
 
-  /* PROFILE PHOTO STYLES */
+  /* PROFILE IMAGE */
   .profile-img {
     display: block;
-    width: 200px;        /* CHANGE THIS to resize (e.g., 150px, 300px) */
-    height: 200px;       /* Keep same as width for perfect circle */
-    object-fit: cover;    /* Ensures image fills circle without stretching */
-    border-radius: 50%; /* Makes image circular */
-    border: 5px solid #00bcd4; /* Blue border around photo */
-    margin: 20px auto;   /* Centers the image */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #00bcd4;
+    margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
 
@@ -135,13 +141,15 @@
 
 <body>
 
-<!-- NAVBAR (LOCKED) -->
+<!-- NAVBAR -->
 <div class="nav-container">
   <a href="index.html" class="logo">My Portfolio</a>
+
   <button class="menu-toggle" id="menu-toggle">☰</button>
+
   <ul class="nav-links" id="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
+    <li><a href="about.html">About Me</a></li>
     <li><a href="skills.html">Skills</a></li>
     <li><a href="experience.html">Experience</a></li>
     <li><a href="education.html">Education</a></li>
@@ -152,7 +160,7 @@
 
 <!-- HEADER -->
 <header>
-  <h1>About Me</h1>
+  <h1>Home</h1>
 </header>
 
 <!-- CONTENT -->
@@ -161,15 +169,20 @@
     <h2>Hi, I'm Jericho Noel A. Tibayan</h2>
     <p>I'm a student at St. Dominic College of Asia based in Bacoor City, Cavite.</p>
 
-    <!-- PROFILE PHOTO - CHANGE "width" VALUE TO RESIZE -->
     <img src="pogi.jpg" alt="Profile Picture" class="profile-img">
   </section>
 </main>
+
+<!-- WAVES (from jec.css) -->
+<div class="wave"></div>
+<div class="wave"></div>
+<div class="wave"></div>
 
 <!-- SCRIPT -->
 <script>
   const toggle = document.getElementById("menu-toggle");
   const nav = document.getElementById("nav-links");
+
   toggle.addEventListener("click", () => {
     nav.classList.toggle("active");
   });

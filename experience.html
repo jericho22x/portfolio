@@ -5,11 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Experience - Jericho Noel A. Tibayan</title>
 
+<!-- EXTERNAL ANIMATED BACKGROUND -->
+<link rel="stylesheet" href="jec.css">
+
 <style>
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f6ff;
+    padding-top: 60px;
   }
 
   /* NAVBAR */
@@ -19,7 +22,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
   }
 
   .logo {
@@ -59,7 +68,7 @@
     color: black;
   }
 
-  /* MOBILE RESPONSIVENESS */
+  /* MOBILE */
   @media (max-width: 768px) {
     .menu-toggle {
       display: block;
@@ -93,7 +102,7 @@
     margin: 0;
   }
 
-  /* CARD STYLES (Consistent with other pages) */
+  /* CARD */
   .card-container {
     background: white;
     padding: 30px;
@@ -115,7 +124,7 @@
     line-height: 1.6;
   }
 
-  /* LIST STYLES */
+  /* EXPERIENCE LIST */
   .experience-list {
     list-style: none;
     padding: 0;
@@ -147,7 +156,7 @@
 
 <!-- NAVBAR -->
 <div class="nav-container">
-  <a href="index.html" class="logo">My Portfolio</a>
+  <a href="index.html" class="logo">Experience</a>
 
   <button class="menu-toggle" id="menu-toggle">☰</button>
 
@@ -167,7 +176,7 @@
   <h1>Experience</h1>
 </header>
 
-<!-- EXPERIENCE SECTION -->
+<!-- CONTENT -->
 <main>
   <section class="card-container">
     <h2>My Experience</h2>
@@ -176,21 +185,26 @@
     <ul class="experience-list">
       <li class="exp-item">
         <h3>Freelance Graphic Designer</h3>
-        <p>Created logos and promotional materials for local businesses using various design software.</p>
+        <p>Created logos and promotional materials for local businesses using design tools.</p>
       </li>
-      
+
       <li class="exp-item">
         <h3>Web Development Projects</h3>
-        <p>Assisted in front-end development using HTML, CSS, and JavaScript for school projects.</p>
+        <p>Built school projects using HTML, CSS, and JavaScript for front-end development.</p>
       </li>
-      
+
       <li class="exp-item">
         <h3>Team Collaboration</h3>
-        <p>Collaborated with classmates on group coding challenges and agile workflows.</p>
+        <p>Worked with classmates on coding projects using teamwork and agile methods.</p>
       </li>
     </ul>
   </section>
 </main>
+
+<!-- WAVES -->
+<div class="wave"></div>
+<div class="wave"></div>
+<div class="wave"></div>
 
 <!-- SCRIPT -->
 <script>

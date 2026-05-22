@@ -5,24 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Skills - Jericho Noel A. Tibayan</title>
 
+<!-- EXTERNAL ANIMATED BACKGROUND -->
+<link rel="stylesheet" href="jec.css">
+
 <style>
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f6ff;
-    /* Add padding so content isn't hidden behind fixed navbar */
     padding-top: 60px;
   }
 
-  /* NAVBAR - LOCKED AT TOP (STAYS WHILE SCROLLING) */
+  /* NAVBAR */
   .nav-container {
     background: #01253b;
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    /* THIS LOCKS THE NAVBAR */
+
     position: fixed;
     top: 0;
     left: 0;
@@ -68,7 +68,7 @@
     color: black;
   }
 
-  /* MOBILE RESPONSIVENESS */
+  /* MOBILE */
   @media (max-width: 768px) {
     .menu-toggle {
       display: block;
@@ -102,7 +102,7 @@
     margin: 0;
   }
 
-  /* CARD STYLES */
+  /* CARD */
   .card-container {
     background: white;
     padding: 30px;
@@ -139,14 +139,20 @@
     color: #01253b;
     font-weight: bold;
   }
+
+  .skill-item p {
+    font-weight: normal;
+    color: #555;
+    margin-top: 5px;
+  }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR (LOCKED AT TOP) -->
+<!-- NAVBAR -->
 <div class="nav-container">
-  <a href="index.html" class="logo">Jericho Portfolio</a>
+  <a href="index.html" class="logo">Skills</a>
 
   <button class="menu-toggle" id="menu-toggle">☰</button>
 
@@ -175,23 +181,31 @@
     <div class="skills-grid">
       <div class="skill-item">
         <h3>Web Development</h3>
-        <p>Proficient in HTML, CSS, and basic JavaScript</p>
+        <p>HTML, CSS, and basic JavaScript</p>
       </div>
+
       <div class="skill-item">
         <h3>Graphic Design</h3>
-        <p>Using Canva and Adobe Photoshop</p>
+        <p>Canva and Adobe Photoshop</p>
       </div>
+
       <div class="skill-item">
         <h3>Programming</h3>
-        <p>Basic knowledge of C and Python</p>
+        <p>Basic C and Python knowledge</p>
       </div>
+
       <div class="skill-item">
         <h3>Soft Skills</h3>
-        <p>Teamwork, communication & problem-solving</p>
+        <p>Teamwork, communication, problem-solving</p>
       </div>
     </div>
   </section>
 </main>
+
+<!-- WAVES -->
+<div class="wave"></div>
+<div class="wave"></div>
+<div class="wave"></div>
 
 <!-- SCRIPT -->
 <script>

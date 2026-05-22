@@ -5,24 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>About Me - Jericho Noel A. Tibayan</title>
 
+<!-- EXTERNAL ANIMATION CSS -->
+<link rel="stylesheet" href="jec.css">
+
 <style>
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f6ff;
-    /* Add padding so content isn't hidden behind fixed navbar */
     padding-top: 60px;
   }
 
-  /* NAVBAR - LOCKED AT TOP */
+  /* NAVBAR */
   .nav-container {
     background: #01253b;
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    /* LOCK THE NAVBAR */
+
     position: fixed;
     top: 0;
     left: 0;
@@ -68,7 +68,7 @@
     color: black;
   }
 
-  /* MOBILE RESPONSIVENESS */
+  /* MOBILE */
   @media (max-width: 768px) {
     .menu-toggle {
       display: block;
@@ -102,7 +102,7 @@
     margin: 0;
   }
 
-  /* CARDS */
+  /* CARD */
   .card-container {
     background: white;
     padding: 30px;
@@ -127,9 +127,9 @@
 
 <body>
 
-<!-- NAVBAR (LOCKED AT TOP) -->
+<!-- NAVBAR -->
 <div class="nav-container">
-  <a href="index.html" class="logo">My Portfolio</a>
+  <a href="index.html" class="logo">About Me</a>
 
   <button class="menu-toggle" id="menu-toggle">☰</button>
 
@@ -151,7 +151,6 @@
 
 <!-- CONTENT -->
 <main>
-  <!-- BIO -->
   <section class="card-container">
     <h2>Hi, I'm Jericho Noel A. Tibayan</h2>
     <p>
@@ -159,16 +158,20 @@
     </p>
   </section>
 
-  <!-- ABOUT -->
   <section class="card-container">
     <h2>More About Me</h2>
     <p>
       I am passionate about technology and continuously learning new skills.
-      I enjoy working on projects that challenge me and allow me to grow both
+      I enjoy working on projects that challenge me and help me grow both
       technically and creatively.
     </p>
   </section>
 </main>
+
+<!-- WAVES (from jec.css) -->
+<div class="wave"></div>
+<div class="wave"></div>
+<div class="wave"></div>
 
 <!-- SCRIPT -->
 <script>
